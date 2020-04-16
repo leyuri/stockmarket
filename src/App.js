@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router } from 'react-router-dom';
+import CompanyDetail from './components/CompanyDetail';
+import CompanyList from './components/CompanyList';
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
+import CompanyNews from './components/CompanyNews';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    return (
+      <div className="App">
+        <Router>
+        <NavBar />
+          <Switch>
+            <Route exact path="/" component={CompanyList} />
+            {/* <Route exact path="/:companyId" component={CompanyDetail} /> */}
+            <Route exact path="/news" component={CompanyNews} />
+            {/* null은 아무나 들어갈 수 있음 */}
+          </Switch>
+        <Footer />
+        </Router>
+      </div>
+    );
+  }
+
 
 export default App;
