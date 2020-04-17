@@ -38,5 +38,11 @@ https://stackoverflow.com/questions/50025717/jest-enzyme-invariant-violation-you
 
 해결완료
 
+##### 2020-04-17
+
+- News 컴포넌트 나누기 (이미지카드/리스트)
+  - 깔끔한 카드 찾고 싶은데....
+-  add Home.js(홈페이지 안에 쪼개서 컴포넌트 배치하기)
+- 회사...리스트 선정해야함...
 
 
