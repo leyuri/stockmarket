@@ -11,7 +11,7 @@ import TableRow from '@material-ui/core/TableRow';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import Chart from './Chart.js'
+// import Chart from './Chart.js'
 
 
 
@@ -94,8 +94,6 @@ export default function CompanyList() {
     <React.Fragment>
     <CssBaseline />
     <Container maxWidth=" ">
-
-      <Chart/>
 
       <Paper className={classes.root}>
       <TableContainer className={classes.container}>

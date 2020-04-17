@@ -5,21 +5,26 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import Container from '@material-ui/core/Container';
+import NewsImage from "./NewsImage";
 
 
 
 
 export default function CompanyNews() {  
+
   const [posts, setPosts] = useState([])
   useEffect(() => {
-    fetch(`${API_URL}news/IBM?token=${API_KEY}`)
+    fetch(`${API_URL}news/AAPL?token=${API_KEY}`)
       .then(response => response.json())
       .then(data => {
         setPosts(data) // new
       })
   }, [])
+
+
   return (
     <Container maxWidth=" ">
+    <NewsImage/>
     <List component="nav" aria-label="main mailbox folders">
     {posts.map(item => (
         <div key={item.title}>
@@ -33,6 +38,9 @@ export default function CompanyNews() {
         </div>
     ))}  
     </List>
+
+
+    
     </Container>
   )
 }
