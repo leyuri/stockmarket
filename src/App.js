@@ -7,6 +7,7 @@ import CompanyList from './components/CompanyList';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import CompanyNews from './components/CompanyNews';
+import Home from './components/Home';
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
         <Router>
         <NavBar />
           <Switch>
-            <Route exact path="/" component={CompanyList} />
+            <Route exact path="/" component={Home} />
             {/* <Route exact path="/:companyId" component={CompanyDetail} /> */}
             <Route exact path="/news" component={CompanyNews} />
             {/* null은 아무나 들어갈 수 있음 */}
