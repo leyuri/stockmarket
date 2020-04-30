@@ -23,6 +23,7 @@ export default function CompanyList() {
 
   return (
     <Container maxWidth=" ">
+      CompanyList
     <List component="nav" aria-label="main mailbox folders">
     {companys.map(item => (
         <div key={item.symbol}>
@@ -40,46 +41,3 @@ export default function CompanyList() {
   )
 }
 
-
-// class CompanyList extends Component{
-//   componentDidMount() {
-//     this.props.fetchCompanyList();
-//   }
-
-//   render() {
-//     const arr_company = ['AAPL','IBM','ADRE'];
-//     var company_list = this.props.company_list;
-//     if (!company_list || company_list.length === 0) {
-//       return <div/>;
-//     }
-//     return (
-//       <Container maxWidth=" ">
-//       <List component="nav" aria-label="main mailbox folders">
-//       { _.map(arr_company => (
-//           <div key={arr_company}>
-//           <ListItem button onClick >
-//               <ListItemText
-//               primary={arr_company}
-//               secondary={arr_company}
-//               />
-//           </ListItem>
-//           <Divider/>
-//           </div>
-//       ))}  
-//       </List>
-//       </Container>
-//     )
-//   }
-// }
-
-// function mapStateToProps(state) {
-//   return {
-//     company_list: state.company_list.data,
-//   };
-// }
-
-// function mapDispatchToProps(dispatch) {
-//   return bindActionCreators({ fetchCompanyList }, dispatch);
-// }
-
-// export default connect(mapStateToProps, mapDispatchToProps)(CompanyList);
